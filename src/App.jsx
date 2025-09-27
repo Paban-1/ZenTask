@@ -1,17 +1,14 @@
 import { useState } from 'react'
-
+import { Dashboard } from './constents'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='select-none'>
  
-    <h1 className="text-3xl text-red-500 font-bold underline">
-      Hello world!
-    </h1>
+    <Dashboard/>
 
-    </>
+    </div>
   )
 }
 
