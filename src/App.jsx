@@ -1,14 +1,8 @@
-import { useState } from 'react'
-import { Dashboard } from './constents'
+import React from 'react'
 
-function App() {
-
+const App = () => {
   return (
-    <div className='select-none'>
- 
-    <Dashboard/>
-
-    </div>
+    <div>App</div>
   )
 }
 
