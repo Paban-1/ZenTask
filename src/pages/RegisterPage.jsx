@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { registerUser } from "../services/auth.js";
+import { TextCompo, InputField, Button } from "../index.js";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -10,59 +11,69 @@ const RegisterPage = () => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [sucess, setSucess] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setLoading(true);
-    const response = registerUser(formData);
-    if (response) {
-      setLoading(false);
-    } else {
-      setError("RegisterUser Error");
-    }
-  };
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+    try {
+      await registerUser(formData);
+      setSuccessMessage("User registered successfully");
+    } catch (error) {
+      setError(error.massege);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
-    <div className="h-screen p-2 border-[2px] border-black text-black select-none">
-      <div className="border border-black">
-        <form onSubmit={handleSubmit} className="p-4 flex flex-col gap-4">
-          <input
-            type="text"
+    <div className="min-h-screen bg-blue-800 select-none flex justify-center items-center relative">
+      {/* <TextCompo /> */}
+
+      <div className="rounded-md z-50">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md"
+        >
+          <h1 className="text-2xl font-semibold mb-6 text-center ">
+            Create Account
+          </h1>
+          {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
+
+          <InputField
+            label="Full Name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter Name"
-            className="border border-black p-4"
+            placehholder="Enter your name"
+            required
           />
-          <input
+          <InputField
+            label="Email"
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter Email"
-            className="border border-black p-4"
+            placehholder="Enter your Email"
+            required
           />
-          <input
+          <InputField
+            label="Password"
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
-            placeholder="Enter Password"
-            className="border border-black p-4"
+            placehholder="Enter your Password"
+            required
           />
-
-          <button
-            className="border border-black p-4 hover:bg-blue-400 hover:rounded-xl hover:text-white"
-            type="submit"
-          >
-            {loading ? "Registaring...." : "Register"}
-          </button>
+          <Button type="submit" variant="primary" size="md" loading={loading}>
+            Sign Up
+          </Button>
         </form>
-        <div className="border p-8 ">{error}</div>
       </div>
     </div>
   );
