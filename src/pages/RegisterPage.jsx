@@ -25,6 +25,7 @@ const RegisterPage = () => {
       await registerUser(formData);
       setSuccessMessage("User registered successfully");
     } catch (error) {
+      console.log(error);
       setError(error.massege);
     } finally {
       setLoading(false);
@@ -74,6 +75,7 @@ const RegisterPage = () => {
             Sign Up
           </Button>
         </form>
+        <h1>{successMessage}</h1>
       </div>
     </div>
   );
