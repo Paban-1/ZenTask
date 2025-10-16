@@ -3,6 +3,8 @@ import { ID } from "appwrite";
 // import { ApiError } from "../utils/ApiError.js";
 // import { parseError } from "../utils/parseError.js";
 
+
+// Regiset User Method
 export const registerUser = async ({email, password, name = ""}) => {
   try {
     const registeredUser = await account.create({
@@ -22,6 +24,7 @@ export const registerUser = async ({email, password, name = ""}) => {
   }
 };
 
+// User Login Method
 export const loginUser = async ({email, password}) => {
   try {
     return await account.createEmailPasswordSession({
@@ -33,6 +36,7 @@ export const loginUser = async ({email, password}) => {
   }
 };
 
+// User LogOut method
 export const logOutUser = async () => {
   try {
     await account.deleteSessions();
@@ -41,6 +45,7 @@ export const logOutUser = async () => {
   }
 };
 
+// Get User Detiles method
 export const getCurrentUser = async () => {
   try {
     return await account.get();
