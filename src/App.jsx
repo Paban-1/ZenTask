@@ -1,9 +1,12 @@
+// Import React
 import React from "react";
-import { RegisterPage } from "./index";
+// Import Pages
+import { RegisterPage , LoginPage} from "./index";
 
 const App = () => {
   return <div className="">
-    <RegisterPage/>
+    {/* <RegisterPage/> */}
+    <LoginPage/>
   </div>;
 };
 
