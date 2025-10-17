@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { registerUser } from "../services/auth.js";
-import { AnimatedTextBackground, InputField, Button } from "../index.js";
+import {
+  AnimatedTextBackground,
+  InputField,
+  Button,
+} from "../constants/index.js";
+// Import NavLink for Navigate
+import { NavLink } from "react-router-dom";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -74,9 +80,14 @@ const RegisterPage = () => {
           <Button type="submit" variant="primary" size="md" loading={loading}>
             Sign Up
           </Button>
+
+          <NavLink to="/users/v1/api/login">
+          <p className="underline text-white duration-200 hover:text-blue-400">Have an account ?</p>
+        </NavLink>
         </form>
         <h1>{successMessage}</h1>
       </div>
+      
     </div>
   );
 };
