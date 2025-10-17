@@ -1,9 +1,29 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
 
+// Import Pages
+import { LandingPage, RegisterPage, LoginPage } from "./constants/index.js";
 
-createRoot(document.getElementById('root')).render(
-    <App />
-)
+// Import element for Routing
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route index element={<LandingPage />} />
+      <Route path="/users/v1/api/register" element={<RegisterPage />} />
+      <Route path="/users/v1/api/login" element={<LoginPage/>}/>
+    </Route>
+  )
+);
+
+createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);

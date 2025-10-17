@@ -1,13 +1,14 @@
 // Import React
 import React from "react";
-// Import Pages
-import { RegisterPage , LoginPage} from "./index";
+// import Outlet for routing
+import { Outlet } from "react-router-dom";
 
 const App = () => {
-  return <div className="">
-    {/* <RegisterPage/> */}
-    <LoginPage/>
-  </div>;
+  return (
+    <div className="border border-black min-h-screen text-black">
+      <Outlet />
+    </div>
+  );
 };
 
 export default App;
