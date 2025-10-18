@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="border border-black min-h-screen text-black">
+    <div className="">
       <Outlet />
     </div>
   );

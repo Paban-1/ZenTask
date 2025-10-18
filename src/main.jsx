@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 
 // Import Pages
-import { LandingPage, RegisterPage, LoginPage } from "./constants/index.js";
+import { LandingPage, RegisterPage, LoginPage, Dashboard,ProtactedRoute } from "./constants/index.js";
 
 // Import element for Routing
 import {
@@ -20,6 +20,11 @@ const router = createBrowserRouter(
       <Route index element={<LandingPage />} />
       <Route path="/user/v1/api/register" element={<RegisterPage />} />
       <Route path="/user/v1/api/login" element={<LoginPage/>}/>
+      <Route path="/user/v1/api/dashboard" element={
+        <ProtactedRoute>
+        <Dashboard/>
+        </ProtactedRoute>
+        }/>
     </Route>
   )
 );
