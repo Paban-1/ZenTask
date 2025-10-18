@@ -1,10 +1,10 @@
 import React from "react";
-// import { ContentSection, Sidebar } from "../constants/index.js";
+import { ContentSection, SidebarSection } from "../constants/index.js";
 
 const Dashboard = () => {
   return <div>
-    {/* <Sidebar/> */}
-    {/* <ContentSection/> */}
+    <SidebarSection/>
+    <ContentSection/>
   </div>;
 };
 
