@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
 
         <div className="">
-          <NavLink to="/users/v1/api/register">
+          <NavLink to="/user/v1/api/register">
           <Button variant="danger">Sing Up</Button>
           </NavLink>
         </div>
