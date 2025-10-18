@@ -7,13 +7,27 @@ import HeroSection from "../components/HeroSection.jsx";
 import Features from "../components/Features.jsx";
 import Footer from "../components/Footer.jsx";
 import Dashboard from "../pages/Dashboard.jsx";
+import ContentSection from '../components/ContentSection.jsx'
+import Logo from '../components/Logo.jsx'
+import Option from '../components/Option.jsx'
+import SidebarSection from '../components/SidebarSection.jsx'
+import TitleSection from '../components/TitleSection.jsx'
+import ToggleClose from '../components/ToggleClose.jsx'
 
 import AnimatedTextBackground from "../components/AnimatedTextBackground.jsx";
 import InputField from "../components/InputField.jsx";
 import Button from "../components/Button.jsx";
+import ProtactedRoute from "../utils/ProtactedRoute.js"
 
 // Export all Imports
 export {
+  ProtactedRoute,
+  ToggleClose,
+  TitleSection,
+  SidebarSection,
+  Option,
+  Logo,
+  ContentSection,
   RegisterPage,
   LoginPage,
   LandingPage,
@@ -40,4 +54,25 @@ export { registerUser, loginUser, logOutUser, getCurrentUser };
 
 // Import Icons form react-Icons
 import { BiMenu } from "react-icons/bi";
-export {BiMenu}
+import {
+  FiBarChart,
+  FiChevronDown,
+  FiChevronsRight,
+  FiDollarSign,
+  FiHome,
+  FiMonitor,
+  FiShoppingCart,
+  FiTag,
+  FiUsers,
+} from "react-icons/fi";
+export {BiMenu,
+  FiBarChart,
+  FiChevronDown,
+  FiChevronsRight,
+  FiDollarSign,
+  FiHome,
+  FiMonitor,
+  FiShoppingCart,
+  FiTag,
+  FiUsers,
+}
