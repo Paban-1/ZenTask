@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { ContentSection, Sidebar } from "../constants/index.js";
 
 const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
+  return <div>
+    <Sidebar/>
+    <ContentSection/>
+  </div>;
+};
 
-export default Dashboard
+export default Dashboard;

@@ -81,7 +81,7 @@ const RegisterPage = () => {
             Sign Up
           </Button>
 
-          <NavLink to="/users/v1/api/login">
+          <NavLink to="/user/v1/api/login">
           <p className="underline text-white duration-200 hover:text-blue-400">Have an account ?</p>
         </NavLink>
         </form>
