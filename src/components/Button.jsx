@@ -16,7 +16,7 @@ const Button = ({
     primary:
       "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-400 disabled:bg-blue-300",
     secondary:
-      "bg-[#F0660A] text-gray-800 hover:bg-orange-300 focus:ring-gray-400 disabled:bg-red-300",
+      "bg-white text-black rounded-full hover:bg-black hover:shadow-white hover:shadow-md hover:text-white focus:ring-gray-400 disabled:bg-red-300",
     danger:
       "bg-red-600 text-white hover:bg-red-700 focus:ring-red-400 disabled:bg-red-300",
   }[variant];
