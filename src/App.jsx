@@ -2,6 +2,7 @@
 import React from "react";
 // import Outlet for routing
 import { Outlet } from "react-router-dom";
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
