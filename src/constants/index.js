@@ -7,10 +7,10 @@ import HeroSection from "../components/LandingPageItems/HeroSection.jsx";
 import Features from "../components/LandingPageItems/Features.jsx";
 import Footer from "../components/LandingPageItems/Footer.jsx";
 import Dashboard from "../pages/Dashboard.jsx";
-import ContentSection from "../components/DashboardItems/ContentSection.js";
-import Logo from "../components/DashboardItems/Logo.js";
-import Option from "../components/DashboardItems/Option.js";
-import SidebarSection from "../components/DashboardItems/SidebarSection.js";
+import ContentSection from "../components/DashboardItems/ContentSection.jsx";
+import Logo from "../components/DashboardItems/Logo.jsx";
+import Option from "../components/DashboardItems/Option.jsx";
+import SidebarSection from "../components/DashboardItems/SidebarSection.jsx";
 import TitleSection from "../components/DashboardItems/TitleSection.jsx";
 import ToggleClose from "../components/DashboardItems/ToggleClose.jsx";
 
@@ -65,8 +65,14 @@ import {
   FiShoppingCart,
   FiTag,
   FiUsers,
+  FiArrowRight,
+  FiBarChart2,
+  FiPieChart,
 } from "react-icons/fi";
 export {
+  FiPieChart,
+  FiBarChart2,
+  FiArrowRight,
   BiMenu,
   FiBarChart,
   FiChevronDown,
@@ -84,3 +90,8 @@ import DashPic from "../assets/zendashboard.png";
 import InzoIconZoomed from '../assets/InzoIconZoomed.png'
 // Export Images
 export { DashPic ,InzoIconZoomed};
+
+// Import AnimationsItems form Feamer Motion
+import { AnimatePresence, motion } from "framer-motion";
+// Export Framer motion
+export { AnimatePresence, motion };
