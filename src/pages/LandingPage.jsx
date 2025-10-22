@@ -5,7 +5,7 @@ const LandingPage = () => {
   return (
     <div className="">
       <Navbar />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Features />
       <Footer />
     </div>

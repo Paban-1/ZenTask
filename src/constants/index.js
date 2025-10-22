@@ -6,6 +6,8 @@ import Navbar from "../components/LandingPageItems/Navbar.jsx";
 import HeroSection from "../components/LandingPageItems/HeroSection.jsx";
 import Features from "../components/LandingPageItems/Features.jsx";
 import Footer from "../components/LandingPageItems/Footer.jsx";
+
+// Import All Dashboard Components
 import Dashboard from "../pages/Dashboard.jsx";
 import ContentSection from "../components/DashboardItems/ContentSection.jsx";
 import Logo from "../components/DashboardItems/Logo.jsx";
@@ -13,6 +15,17 @@ import Option from "../components/DashboardItems/Option.jsx";
 import SidebarSection from "../components/DashboardItems/SidebarSection.jsx";
 import TitleSection from "../components/DashboardItems/TitleSection.jsx";
 import ToggleClose from "../components/DashboardItems/ToggleClose.jsx";
+
+// Import All Navbar Components
+import ShiftingDropDown from "../components/NavBarItems/ShiftingDropDown.jsx"
+import Bridge from "../components/NavBarItems/Bridge.jsx"
+import Blog from "../components/NavBarItems/Blog.jsx"
+import Content from "../components/NavBarItems/Content.jsx"
+import Nub from "../components/NavBarItems/Nub.jsx"
+import Pricing from "../components/NavBarItems/Pricing.jsx"
+import Products from '../components/NavBarItems/Products.jsx'
+import Tab from "../components/NavBarItems/Tab.jsx"
+import Tabs from "../components/NavBarItems/Tabs.jsx"
 
 import AnimatedTextBackground from "../components/AnimatedTextBackground.jsx";
 import InputField from "../components/ReuseItems/InputField.jsx";
@@ -22,6 +35,15 @@ import ProtactedRoute from "../utils/ProtactedRoute.js";
 
 // Export all Imports
 export {
+  Tabs,
+  Tab,
+  Products,
+  Pricing,
+  Nub,
+  Content,
+  Blog,
+  Bridge,
+  ShiftingDropDown,
   ProtactedRoute,
   ToggleClose,
   TitleSection,
