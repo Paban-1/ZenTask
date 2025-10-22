@@ -2,21 +2,22 @@
 import RegisterPage from "../pages/RegisterPage.jsx";
 import LoginPage from "../pages/LoginPage.jsx";
 import LandingPage from "../pages/LandingPage.jsx";
-import Navbar from "../components/Navbar.jsx";
-import HeroSection from "../components/HeroSection.jsx";
-import Features from "../components/Features.jsx";
-import Footer from "../components/Footer.jsx";
+import Navbar from "../components/LandingPageItems/Navbar.jsx";
+import HeroSection from "../components/LandingPageItems/HeroSection.jsx";
+import Features from "../components/LandingPageItems/Features.jsx";
+import Footer from "../components/LandingPageItems/Footer.jsx";
 import Dashboard from "../pages/Dashboard.jsx";
-import ContentSection from "../components/ContentSection.jsx";
-import Logo from "../components/Logo.jsx";
-import Option from "../components/Option.jsx";
-import SidebarSection from "../components/SidebarSection.jsx";
-import TitleSection from "../components/TitleSection.jsx";
-import ToggleClose from "../components/ToggleClose.jsx";
+import ContentSection from "../components/DashboardItems/ContentSection.js";
+import Logo from "../components/DashboardItems/Logo.js";
+import Option from "../components/DashboardItems/Option.js";
+import SidebarSection from "../components/DashboardItems/SidebarSection.js";
+import TitleSection from "../components/DashboardItems/TitleSection.jsx";
+import ToggleClose from "../components/DashboardItems/ToggleClose.jsx";
 
 import AnimatedTextBackground from "../components/AnimatedTextBackground.jsx";
-import InputField from "../components/InputField.jsx";
-import Button from "../components/Button.jsx";
+import InputField from "../components/ReuseItems/InputField.jsx";
+import Button from "../components/ButtonsItems/Button.jsx";
+import DrawOutlineButton from '../components/ButtonsItems/DrawOutlineButton.jsx';
 import ProtactedRoute from "../utils/ProtactedRoute.js";
 
 // Export all Imports
@@ -39,6 +40,7 @@ export {
   AnimatedTextBackground,
   InputField,
   Button,
+  DrawOutlineButton,
 };
 
 // Import All auth methods
