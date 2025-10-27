@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+    font-family: "pricedown";
+    src: url("./pricedown.otf");
+}
+html,
+body {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* font-family: "pricedown"; */
+}

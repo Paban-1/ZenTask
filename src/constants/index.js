@@ -110,8 +110,11 @@ export {
 // Import Images
 import DashPic from "../assets/zendashboard.png";
 import InzoIconZoomed from '../assets/InzoIconZoomed.png'
+import DashBoardPic from "../assets/zendashboardd.png"
+import MainLogo from "../assets/Logo.png"
+
 // Export Images
-export { DashPic ,InzoIconZoomed};
+export { DashPic ,InzoIconZoomed, DashBoardPic, MainLogo};
 
 // Import AnimationsItems form Feamer Motion
 import { AnimatePresence, motion } from "framer-motion";
