@@ -15,14 +15,14 @@ const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 export const HeroSection = () => {
   const color = useMotionValue(COLORS_TOP[0]);
 
-  useEffect(() => {
-    animate(color, COLORS_TOP, {
-      ease: "easeInOut",
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, []);
+  // useEffect(() => {
+  //   animate(color, COLORS_TOP, {
+  //     ease: "easeInOut",
+  //     duration: 10,
+  //     repeat: Infinity,
+  //     repeatType: "mirror",
+  //   });
+  // }, []);
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
@@ -40,11 +40,11 @@ export const HeroSection = () => {
           <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm">
             Beta Now Live!
           </span>
-          <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-start text-3xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight font-bold whitespace-nowrap">
+          <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-start text-4xl leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight font-bold whitespace-nowrap">
             Unify Your Workflow. <br /> Control Your Day. <br /> Welcome to
             Zentask.
           </h1>
-          <p className="my-6 max-w-xl text-start text-base leading-relaxed md:text-lg md:leading-relaxed">
+          <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
             Stop toggling between tools. Zentask provides a seamless, intuitive
             space for task management, goal tracking, and team collaboration.
             Everything you need to transform your productivity is now in one
@@ -72,15 +72,15 @@ export const HeroSection = () => {
           <img
             src={DashBoardPic}
             alt="Dashboard Img"
-            className="w-[45vw] rounded-md"
+            className="md:w-[48vw] w-[70vw] rounded-md"
           />
         </div>
       </div>
 
       <div className="absolute inset-0 z-0">
-        <Canvas>
+        {/* <Canvas>
           <Stars radius={50} count={2500} factor={4} fade speed={2} />
-        </Canvas>
+        </Canvas> */}
       </div>
     </motion.section>
   );

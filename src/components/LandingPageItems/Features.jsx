@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Features = () => {
   return (
-    <div>Features</div>
-  )
-}
+    <div className="border text-white">
+      <div className="border">soon..</div>
+    </div>
+  );
+};
 
-export default Features
+export default Features;
