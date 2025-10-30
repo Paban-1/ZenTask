@@ -6,7 +6,9 @@ import Navbar from "../components/LandingPageItems/Navbar.jsx";
 import HeroSection from "../components/LandingPageItems/HeroSection.jsx";
 import Features from "../components/LandingPageItems/Features.jsx";
 import Footer from "../components/LandingPageItems/Footer.jsx";
-import ProductValuePage from  "../components/LandingPageItems/ProductValue.jsx"
+import ProductValuePage from "../components/LandingPageItems/ProductValue.jsx";
+import Personas from "../components/LandingPageItems/Personas.jsx";
+import FaqSection from "../components/LandingPageItems/FaqSecion.jsx";
 
 // Import All Dashboard Components
 import Dashboard from "../pages/Dashboard.jsx";
@@ -18,27 +20,37 @@ import TitleSection from "../components/DashboardItems/TitleSection.jsx";
 import ToggleClose from "../components/DashboardItems/ToggleClose.jsx";
 
 // Import All Navbar Components
-import ShiftingDropDown from "../components/NavBarItems/ShiftingDropDown.jsx"
-import Bridge from "../components/NavBarItems/Bridge.jsx"
-import Blog from "../components/NavBarItems/Blog.jsx"
-import Content from "../components/NavBarItems/Content.jsx"
-import Nub from "../components/NavBarItems/Nub.jsx"
-import Pricing from "../components/NavBarItems/Pricing.jsx"
-import Products from '../components/NavBarItems/Products.jsx'
-import Tab from "../components/NavBarItems/Tab.jsx"
-import Tabs from "../components/NavBarItems/Tabs.jsx"
-import ProductValueSection from "../components/ProductValue/ProductValueSection.jsx"
+import ShiftingDropDown from "../components/NavBarItems/ShiftingDropDown.jsx";
+import Bridge from "../components/NavBarItems/Bridge.jsx";
+import Blog from "../components/NavBarItems/Blog.jsx";
+import Content from "../components/NavBarItems/Content.jsx";
+import Nub from "../components/NavBarItems/Nub.jsx";
+import Pricing from "../components/NavBarItems/Pricing.jsx";
+import Products from "../components/NavBarItems/Products.jsx";
+import Tab from "../components/NavBarItems/Tab.jsx";
+import Tabs from "../components/NavBarItems/Tabs.jsx";
+import ProductValueSection from "../components/ProductValue/ProductValueSection.jsx";
 
 // ReUse Components
 import AnimatedTextBackground from "../components/AnimatedTextBackground.jsx";
 import InputField from "../components/ReuseItems/InputField.jsx";
 import Button from "../components/ButtonsItems/Button.jsx";
-import DrawOutlineButton from '../components/ButtonsItems/DrawOutlineButton.jsx';
-import ProductValuCart from "../components/ReuseItems/ProductValueCart.jsx"
+import DrawOutlineButton from "../components/ButtonsItems/DrawOutlineButton.jsx";
+import ProductValuCart from "../components/ReuseItems/ProductValueCart.jsx";
 import ProtactedRoute from "../utils/ProtactedRoute.js";
+import FeatureCart from "../components/ReuseItems/FeatureCart.jsx";
+import PersonasCart from "../components/ReuseItems/PersonasCart.jsx";
+import FaqCart from "../components/ReuseItems/FaqCart.jsx";
+import FooterCart from "../components/ReuseItems/FooterCart.jsx";
 
 // Export all Imports
 export {
+  FooterCart,
+  FaqCart,
+  FaqSection,
+  PersonasCart,
+  Personas,
+  FeatureCart,
   ProductValuePage,
   ProductValueSection,
   ProductValuCart,
@@ -116,12 +128,20 @@ export {
 
 // Import Images
 import DashPic from "../assets/zendashboard.png";
-import InzoIconZoomed from '../assets/InzoIconZoomed.png'
-import DashBoardPic from "../assets/zendashboardd.png"
-import MainLogo from "../assets/Logo.png"
+import InzoIconZoomed from "../assets/InzoIconZoomed.png";
+import DashBoardPic from "../assets/zendashboardd.png";
+import MainLogo from "../assets/Logo.png";
+
+// Coustomer Imges
+import img1 from "../assets/Imgs/img1.png";
+import img2 from "../assets/Imgs/img2.png";
+import img3 from "../assets/Imgs/img3.png";
+import img4 from "../assets/Imgs/img4.png";
+
+export { img1, img2, img3, img4 };
 
 // Export Images
-export { DashPic ,InzoIconZoomed, DashBoardPic, MainLogo};
+export { DashPic, InzoIconZoomed, DashBoardPic, MainLogo };
 
 // Import AnimationsItems form Feamer Motion
 import { AnimatePresence, motion } from "framer-motion";
@@ -169,5 +189,90 @@ export const ProductValue = [
     text: "Search Engine",
     text2: "Optimization",
     color: "bg-[#fffdfa]",
+  },
+];
+
+export const FeaturesData = [
+  {
+    id: 1,
+    headding: "Smart task automation",
+    subheading:
+      "Let ZenTask handle the repetitive stuff. Create rules, triggers, and recurring actions that keep your workflow moving even when you're not.",
+  },
+  {
+    id: 2,
+    headding: "Collaborative workspaces",
+    subheading:
+      "Where teams find their rhythm. Assign tasks, share updates, and comment in real time. ZenTask turns collaboration into momentum.",
+  },
+  {
+    id: 3,
+    headding: "Minimalist interface",
+    subheading:
+      "Clarity by design. A clean, distraction free layout that helps you focus on what matters no clutter, no noise.",
+  },
+  {
+    id: 4,
+    headding: "Priority & deadline control",
+    subheading:
+      "Stay ahesd, not overwhelmed. Set priorities, due dates, and reminders that keep your goals aligned and your mind clear.",
+  },
+];
+
+export const PersonasData = [
+  {
+    id: 1,
+    roal: "Corporates",
+    sub: "Make You'er Life easy",
+    color: "bg-[#3540FA]",
+    img: img1,
+  },
+  {
+    id: 2,
+    roal: "Teacher",
+    sub: "Make You'er Life easy",
+    color: "bg-[#FF7826]",
+    img: img2,
+  },
+  {
+    id: 3,
+    roal: "Personal",
+    sub: "Make You'er Life easy",
+    color: "bg-[#E5E1FC]",
+    img: img3,
+  },
+  {
+    id: 4,
+    roal: "Content Creators",
+    sub: "Make You'er Life easy",
+    color: "bg-[#797ED9]",
+    img: img4,
+  },
+];
+
+// Footer Cart Section
+export const FooterCartData = [
+  {
+    id: 1,
+    section: "Features",
+    linkone: "Asset Library",
+    linktwo: "Integrations",
+    linkthree: "Media Player",
+  },
+  {
+    id: 2,
+    section: "Use Cases",
+    linkone: "DTC and eCom",
+    linktwo: "Gaming",
+    linkthree: "Agencies",
+  },
+  {
+    id: 3,
+    section: "Company",
+    linkone: "About us",
+    linktwo: "Blog",
+    linkthree: "FAQ",
+    linkfour: "Pricing",
+    linkfive: "Privacy policy",
   },
 ];

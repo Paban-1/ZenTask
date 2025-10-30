@@ -5,7 +5,7 @@ const ProductValueSection = () => {
   return (
     <div className="w-full text-white overflow-hidden px-10 py-4">
       <div className="mb-12 ">
-        <h2 className="md:text-7xl sm:text-3xl lg:text-7xl text-4xl font-extralight whitespace-nowrap tracking-tighter">
+        <h2 className="md:text-7xl sm:text-5xl lg:text-7xl text-4xl font-extralight whitespace-nowrap tracking-tighter">
           Workflow is a canvas <br /> ZenTask is your
           <span className="border-b-2"> brush. </span>
         </h2>
