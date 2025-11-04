@@ -37,7 +37,7 @@ import InputField from "../components/ReuseItems/InputField.jsx";
 import Button from "../components/ButtonsItems/Button.jsx";
 import DrawOutlineButton from "../components/ButtonsItems/DrawOutlineButton.jsx";
 import ProductValuCart from "../components/ReuseItems/ProductValueCart.jsx";
-import ProtactedRoute from "../utils/ProtactedRoute.js";
+import ProtectedRoute from "../utils/ProtectedRoute.js";
 import FeatureCart from "../components/ReuseItems/FeatureCart.jsx";
 import PersonasCart from "../components/ReuseItems/PersonasCart.jsx";
 import FaqCart from "../components/ReuseItems/FaqCart.jsx";
@@ -63,7 +63,7 @@ export {
   Blog,
   Bridge,
   ShiftingDropDown,
-  ProtactedRoute,
+  ProtectedRoute,
   ToggleClose,
   TitleSection,
   SidebarSection,

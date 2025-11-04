@@ -9,7 +9,7 @@ import {
   RegisterPage,
   LoginPage,
   Dashboard,
-  ProtactedRoute,
+  ProtectedRoute,
 } from "./constants/index.js";
 
 // Import element for Routing
@@ -31,9 +31,9 @@ const router = createBrowserRouter(
       <Route
         path="/user/v1/api/dashboard"
         element={
-          <ProtactedRoute>
+          <ProtectedRoute>
           <Dashboard />
-          </ProtactedRoute>
+          </ProtectedRoute>
         }
       />
     </Route>
