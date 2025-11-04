@@ -1,5 +1,6 @@
 import React from "react";
 import { FooterCart, FooterCartData } from "../../constants/index.js";
+import {version} from "../../../package.json"
 
 const Footer = () => {
   return (
@@ -9,6 +10,7 @@ const Footer = () => {
           <p className="font-extrabold">ZenTask</p>
           <p className="flex flex-col text-xl">
             Paasivuirekatu 4 A, <span>00530 Helsinki, India</span>
+            <span>V {version}</span>
           </p>
         </div>
         <div className=" flex gap-14">

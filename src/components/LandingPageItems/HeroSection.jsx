@@ -15,14 +15,14 @@ const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 export const HeroSection = () => {
   const color = useMotionValue(COLORS_TOP[0]);
 
-  useEffect(() => {
-    animate(color, COLORS_TOP, {
-      ease: "easeInOut",
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, []);
+  // useEffect(() => {
+  //   animate(color, COLORS_TOP, {
+  //     ease: "easeInOut",
+  //     duration: 10,
+  //     repeat: Infinity,
+  //     repeatType: "mirror",
+  //   });
+  // }, []);
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
@@ -79,9 +79,9 @@ export const HeroSection = () => {
       </div>
 
       <div className="absolute inset-0 z-0">
-        <Canvas>
+        {/* <Canvas>
           <Stars radius={50} count={2500} factor={4} fade speed={2} />
-        </Canvas>
+        </Canvas> */}
       </div>
     </motion.section>
   );

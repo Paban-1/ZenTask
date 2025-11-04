@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ListItem from "./ListItem.jsx";
 import {MainLogo} from "../../constants/index.js"
+import { NavLink } from "react-router-dom";
 
 const MainNavbar = () => {
   const [open, setOpen] = useState(false);
@@ -52,19 +53,22 @@ const MainNavbar = () => {
               </nav>
             </div>
             <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-              <a
-                href="/#"
-                className="px-7 py-2 text-base font-medium text-dark hover:text-primary dark:text-white"
-              >
+              
+              <NavLink to="/user/v1/api/login"> 
+              
+                {/* // className="px-7 py-2 text-base font-medium text-dark hover:text-primary dark:text-white" */}
+              
                 Sign in
-              </a>
+              
+              </NavLink>
 
-              <a
-                href="/#"
-                className="rounded-md bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary/90"
-              >
+              <NavLink to="/user/v1/api/register">
+            
+                {/* className="rounded-md bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary/90" */}
+            
                 Sign Up
-              </a>
+              
+              </NavLink>
             </div>
           </div>
         </div>

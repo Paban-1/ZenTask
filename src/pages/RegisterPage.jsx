@@ -39,7 +39,7 @@ const RegisterPage = () => {
   };
   return (
     <div className="min-h-screen select-none flex justify-center items-center relative bg-[#F0660A]">
-      <AnimatedTextBackground />
+      {/* <AnimatedTextBackground /> */}
 
       <div className="rounded-md z-40">
         <form
