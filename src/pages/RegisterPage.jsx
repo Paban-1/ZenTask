@@ -6,9 +6,11 @@ import {
   Button,
 } from "../constants/index.js";
 // Import NavLink for Navigate
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
+const navigate = useNavigate()
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,6 +32,7 @@ const RegisterPage = () => {
     try {
       await registerUser(formData);
       setSuccessMessage("User registered successfully");
+      navigate("/user/v1/api/dashboard")
     } catch (error) {
       console.log(error);
       setError(error.massege);

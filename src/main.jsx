@@ -4,7 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 
 // Import Pages
-import { LandingPage, RegisterPage, LoginPage, Dashboard,ProtactedRoute } from "./constants/index.js";
+import {
+  LandingPage,
+  RegisterPage,
+  LoginPage,
+  Dashboard,
+  ProtactedRoute,
+} from "./constants/index.js";
 
 // Import element for Routing
 import {
@@ -15,7 +21,7 @@ import {
 } from "react-router-dom";
 
 import { Provider } from "react-redux";
-import {store} from "./store/store.js"
+import { store } from "./store/store.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,12 +29,15 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index element={<LandingPage />} />
       <Route path="/user/v1/api/register" element={<RegisterPage />} />
-      <Route path="/user/v1/api/login" element={<LoginPage/>}/>
-      <Route path="/user/v1/api/dashboard" element={
-        <ProtactedRoute>
-        <Dashboard/>
-        </ProtactedRoute>
-        }/>
+      <Route path="/user/v1/api/login" element={<LoginPage />} />
+      <Route
+        path="/user/v1/api/dashboard"
+        element={
+          // <ProtactedRoute>
+          <Dashboard />
+          // </ProtactedRoute>
+        }
+      />
     </Route>
     // </Provider>
   )
