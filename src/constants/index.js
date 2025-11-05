@@ -37,7 +37,7 @@ import InputField from "../components/ReuseItems/InputField.jsx";
 import Button from "../components/ButtonsItems/Button.jsx";
 import DrawOutlineButton from "../components/ButtonsItems/DrawOutlineButton.jsx";
 import ProductValuCart from "../components/ReuseItems/ProductValueCart.jsx";
-import ProtectedRoute from "../utils/ProtectedRoute.js";
+import ProtectedRoute from "../utils/ProtectedRoute.jsx";
 import FeatureCart from "../components/ReuseItems/FeatureCart.jsx";
 import PersonasCart from "../components/ReuseItems/PersonasCart.jsx";
 import FaqCart from "../components/ReuseItems/FaqCart.jsx";
