@@ -30,6 +30,7 @@ import Products from "../components/NavBarItems/Products.jsx";
 import Tab from "../components/NavBarItems/Tab.jsx";
 import Tabs from "../components/NavBarItems/Tabs.jsx";
 import ProductValueSection from "../components/ProductValue/ProductValueSection.jsx";
+import NavigationBar from "../components/NavBarItems/NavigationBar.jsx";
 
 // ReUse Components
 import AnimatedTextBackground from "../components/AnimatedTextBackground.jsx";
@@ -45,6 +46,7 @@ import FooterCart from "../components/ReuseItems/FooterCart.jsx";
 
 // Export all Imports
 export {
+  NavigationBar,
   FooterCart,
   FaqCart,
   FaqSection,
@@ -95,13 +97,14 @@ import {
 export { registerUser, loginUser, logOutUser, getCurrentUser };
 
 // Import Icons form react-Icons
-import { BiMenu } from "react-icons/bi";
+import { BiMenu ,BiX} from "react-icons/bi";
 import {
   FiBarChart,
   FiChevronDown,
   FiChevronsRight,
   FiDollarSign,
   FiHome,
+  FiMenu,
   FiMonitor,
   FiShoppingCart,
   FiTag,
@@ -111,6 +114,8 @@ import {
   FiPieChart,
 } from "react-icons/fi";
 export {
+  FiMenu,
+  BiX,
   FiPieChart,
   FiBarChart2,
   FiArrowRight,
@@ -276,3 +281,11 @@ export const FooterCartData = [
     linkfive: "Privacy policy",
   },
 ];
+
+// Import NavItems & export 
+export const NAVITEM =[
+  {id:1, label:"Feature"},
+  {id:2, label:"About Us"},
+  {id:3, label:"Pricing"},
+  {id:4, label:"Contact"}
+]

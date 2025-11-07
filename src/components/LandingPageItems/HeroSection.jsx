@@ -35,7 +35,7 @@ export const HeroSection = () => {
       }}
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
     >
-      <div className="flex justify-center items-center flex-wrap gap-4 mt-8">
+      <div className="flex justify-center items-center flex-wrap gap-4 mt-6">
         <div className="relative z-40 flex flex-col items-center">
           <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm">
             Beta Now Live!

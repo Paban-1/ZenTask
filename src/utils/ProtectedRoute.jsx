@@ -1,16 +1,8 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
   const { user, status } = useSelector((state) => state.auth);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (status === "succeeded" && !user) {
-      navigate("/user/v1/api/login");
-    }
-  }, [status, user, navigate]);
 
   if (status === "loading" || status === "idle") {
     return (
@@ -18,6 +10,10 @@ const ProtectedRoute = ({ children }) => {
         Checking session...
       </div>
     );
+  }
+
+  if (!user) {
+    return <Navigate to="/user/v1/api/login" replace />;
   }
 
   return children;

@@ -27,11 +27,20 @@ export const registerUser = async ({email, password, name = ""}) => {
 // User Login Method
 export const loginUser = async ({email, password}) => {
   try {
+// Check if a session already exists
+const existingSession = await account.getSession("current")
+if(existingSession){
+  return existingSession
+}
+
     return await account.createEmailPasswordSession({
       email,
       password,
     });
   } catch (error) {
+    if (error.code === 404) {
+      return await account.createEmailPasswordSession(email, password);
+    }
     throw error;
   }
 };
