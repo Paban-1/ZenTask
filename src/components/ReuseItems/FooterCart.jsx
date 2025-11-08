@@ -11,7 +11,7 @@ const FooterCart = ({
   return (
     <div className="rounded-md">
       <h2 className="font-bold tracking-tighter text-md mb-4">{section}</h2>
-      <div className="ml-2 space-y-2 text-[#a19a9a]">
+      <div className="space-y-2 text-[#a19a9a]">
         <p className="hover:text-white">{linkone}</p>
         <p className="hover:text-white">{linktwo}</p>
         <p className="hover:text-white">{linkthree}</p>

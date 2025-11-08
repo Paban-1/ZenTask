@@ -1,15 +1,17 @@
 import React from "react";
 import { FooterCart, FooterCartData } from "../../constants/index.js";
-import {version} from "../../../package.json"
+import { version } from "../../../package.json";
 
 const Footer = () => {
   return (
-    <footer className="text-white md:px-16 px-10 border-t border-dotted py-8 mt-4">
+    <footer className="text-white md:px-16 px-10 border-t border-dotted py-8 mt-4 bg-zinc-900">
       <div className=" p-2 md:flex justify-between items-center ">
         <div className="mb-10">
           <p className="font-extrabold">ZenTask</p>
-          <p className="flex flex-col text-xl">
-            Paasivuirekatu 4 A, <span>00530 Helsinki, India</span>
+          <p className="flex flex-col text-md">
+            ZenTask simplify work. Amplify focus.<span> </span>
+            <span>An Ai powered task management </span>
+            <span>app built for teams and creators.</span>
             <span>V {version}</span>
           </p>
         </div>

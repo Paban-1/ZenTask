@@ -260,25 +260,26 @@ export const FooterCartData = [
   {
     id: 1,
     section: "Features",
-    linkone: "Asset Library",
-    linktwo: "Integrations",
-    linkthree: "Media Player",
+    linkone: "Smart Prioritization",
+    linktwo: "Auto Scheduling",
+    linkthree: "Analytics Dashboard",
+    linkfour:"Secure & Synced Everywhere"
   },
   {
     id: 2,
     section: "Use Cases",
-    linkone: "DTC and eCom",
-    linktwo: "Gaming",
-    linkthree: "Agencies",
+    linkone: "Freelancers & Creators",
+    linktwo: "Developers",
+    linkthree: "Students",
+    linkfour:"Teams & Startups"
   },
   {
     id: 3,
-    section: "Company",
-    linkone: "About us",
-    linktwo: "Blog",
-    linkthree: "FAQ",
-    linkfour: "Pricing",
-    linkfive: "Privacy policy",
+    section: "Social Media",
+    linkone: "GitHub",
+    linktwo: "Linkedin",
+    linkthree: "Twitter",
+    linkfour: "Youtube",
   },
 ];
 
