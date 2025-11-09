@@ -43,7 +43,7 @@ const NavigationBar = () => {
 
         <div className="flex gap-2">
           {!user && (
-            <NavLink to="/log" className={`bg-purple-500 px-6 py-1 rounded-full hidden md:flex`}>
+            <NavLink to="/login" className={`bg-purple-500 px-6 py-1 rounded-full hidden md:flex`}>
             Login
           </NavLink>
           )}
@@ -66,7 +66,7 @@ const NavigationBar = () => {
           ))}
         </div>
         <div className="flex"> 
-        <NavLink to="/log" className={`bg-purple-500 px-6 py-1 rounded-full`}>
+        <NavLink to="/login" className={`bg-purple-500 px-6 py-1 rounded-full`}>
           {!user? "Login":"dashboard"}
         </NavLink>
         </div>

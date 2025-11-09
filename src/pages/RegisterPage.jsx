@@ -90,7 +90,7 @@ const handleSubmit = async (e) => {
         {error && (
           <p className="text-red-600 text-sm text-center mt-2">{error}</p>
         )}
-        <h1>{successMessage}</h1>
+       
       </div>
       
     </div>
