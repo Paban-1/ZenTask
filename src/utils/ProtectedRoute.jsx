@@ -1,22 +1,26 @@
 import { useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const ProtectedRoute = ({ children }) => {
+const ProtectedRoute = () => {
   const { user, status } = useSelector((state) => state.auth);
 
-  if (status === "loading" || status === "idle") {
+  console.log("SO this is protected user",user);
+  if(status === "loading")
+   {
     return (
-      <div className="flex justify-center items-center h-screen text-xl">
-        Checking session...
+      <div className="flex justify-center items-center h-screen text-lg text-gray-600">
+        Checking authentication...
       </div>
     );
   }
+  
+  
 
   if (!user) {
-    return <Navigate to="/user/v1/api/login" replace />;
+    return <Navigate to="/login" replace />;
   }
 
-  return children;
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

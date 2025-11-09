@@ -1,17 +1,20 @@
 // Import React
-import React from "react";
+import React, {useEffect} from "react";
 // import Outlet for routing
 import { Outlet } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import { Provider } from "react-redux";
-import {store} from "./store/store.js"
+import { useDispatch } from "react-redux";
+import { fetchCurrentUserThunk } from "./store/authSlice.js";
 
 const App = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchCurrentUserThunk());
+  }, [dispatch]);
   return (
     <div className="">
-      <Provider store={store}>
+
         <Outlet />
-      </Provider>
+  
     </div>
   );
 };

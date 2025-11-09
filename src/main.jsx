@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 
+import { Provider } from "react-redux";
+import { store } from "./constants";
+
 // Import Pages
 import {
   LandingPage,
@@ -20,27 +23,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
-
     <Route path="/" element={<App />}>
       <Route index element={<LandingPage />} />
-      <Route path="/user/v1/api/register" element={<RegisterPage />} />
-      <Route path="/user/v1/api/login" element={<LoginPage />} />
-      <Route
-        path="/user/v1/api/dashboard"
-        element={
-          <ProtectedRoute>
-          <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-    </Route>
+      <Route path="register" element={<RegisterPage />} />
+      <Route path="/login" element={<LoginPage />} />
 
+      <Route element={<ProtectedRoute/>}>
+      <Route path="/dashboard" element={<Dashboard />} />
+      </Route>
+    </Route>
   )
 );
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );

@@ -1,32 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // Import Components form Index.js
-import { loginUser, InputField, Button } from "../constants/index.js";
+import { loginThunk, InputField, Button } from "../constants/index.js";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginPage = () => {
-  const [formData, setFormData] = useState({
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { status, user, error } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (status === "succeeded" && user) {
+      navigate("/dashboard");
+    }
+  }, [status, user, navigate]);
+
+  const [form, setForm] = useState({
     email: "",
     password: "",
   });
-  const [error, setError] = useState(null);
-  const [tryError, setTryError] = useState(null);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null);
-    try {
-      const result = await loginUser(formData);
-      if (result.success) {
-        // Call Routing if user success fully login
-      } else {
-        setError(`${result.message}` || "Invalid Pass");
-      }
-    } catch (error) {
-      setTryError(`login Failed : ${error.message}`);
-      console.log(error);
+    const result = await dispatch(loginThunk(form));
+    if (result.meta.requestStatus === "fulfilled") {
+      navigate("/dashboard");
     }
   };
 
@@ -44,7 +47,7 @@ const LoginPage = () => {
             label="Email"
             type="email"
             name="email"
-            value={formData.email}
+            value={form.email}
             onChange={handleChange}
             placehholder="Enter your Email"
             required
@@ -53,14 +56,24 @@ const LoginPage = () => {
             label="Full Name"
             type="password"
             name="password"
-            value={formData.password}
+            value={form.password}
             onChange={handleChange}
             placehholder="Enter your Password"
             required
           />
-          <Button type="submit">Login</Button>
-          {error && <div>{error}</div>}
-          {tryError && <div className="text-red-700 font-bold">{tryError}</div>}
+          <Button type="submit" disabled={status === "loading"}>
+            {status === "loading" ? "Logging in..." : "Login"}
+          </Button>
+          {error && (
+            <p className="text-red-600 text-sm text-center mt-2">{error}</p>
+          )}
+
+          <p className="text-center text-sm mt-4">
+            Don't have an account?{" "}
+            <Link to="/register" className="text-blue-600 hover:underline">
+              Register
+            </Link>
+          </p>
         </form>
       </div>
     </div>

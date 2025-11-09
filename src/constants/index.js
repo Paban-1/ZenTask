@@ -86,16 +86,6 @@ export {
   DrawOutlineButton,
 };
 
-// Import All auth methods
-import {
-  registerUser,
-  loginUser,
-  logOutUser,
-  getCurrentUser,
-} from "../services/auth.js";
-
-export { registerUser, loginUser, logOutUser, getCurrentUser };
-
 // Import Icons form react-Icons
 import { BiMenu ,BiX} from "react-icons/bi";
 import {
@@ -147,6 +137,12 @@ export { img1, img2, img3, img4 };
 
 // Export Images
 export { DashPic, InzoIconZoomed, DashBoardPic, MainLogo };
+
+// Import RTK Store & Export
+import {store} from "../store/store.js"
+import {loginThunk, logoutThunk, registerThunk, fetchCurrentUserThunk} from "../store/authSlice.js"
+
+export {store, loginThunk,logoutThunk, registerThunk,fetchCurrentUserThunk }
 
 // Import AnimationsItems form Feamer Motion
 import { AnimatePresence, motion } from "framer-motion";
