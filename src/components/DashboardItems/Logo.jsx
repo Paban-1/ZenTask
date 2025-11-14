@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from "framer-motion"
+import {ZenLogo} from "../../constants"
 
 const Logo = () => {
   return (
@@ -7,7 +8,8 @@ const Logo = () => {
           layout
           className="grid size-10 shrink-0 place-content-center rounded-md bg-indigo-600"
         >
-          <svg
+          <img src={ZenLogo} alt="Logo" />
+          {/* <svg
             width="24"
             height="auto"
             viewBox="0 0 50 39"
@@ -23,7 +25,7 @@ const Logo = () => {
               d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
               stopColor="#000000"
             ></path>
-          </svg>
+          </svg> */}
         </motion.div>
       );
     };

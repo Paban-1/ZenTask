@@ -1,32 +1,39 @@
-import React from 'react'
-import {motion} from "framer-motion"
+import React from "react";
+import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
-const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
+const Option = ({ Icon, title, selected, setSelected, open, notifs, to }) => {
   return (
+    <NavLink to={to}>
     <motion.button
       layout
       onClick={() => setSelected(title)}
-      className={`relative flex h-10 w-full items-center rounded-md transition-colors ${selected === title ? "bg-indigo-100 text-indigo-800" : "text-slate-500 hover:bg-slate-100"}`}
+      className={`relative flex h-10 w-full items-center rounded-md transition-colors ${
+        selected === title
+          ? "bg-indigo-100 text-indigo-800"
+          : "text-slate-500 hover:bg-slate-100"
+      }`}
     >
-      <motion.div
-        layout
-        className="grid h-full w-10 place-content-center text-lg"
-      >
-        <Icon />
-      </motion.div>
-      {open && (
-        <motion.span
+      
+        <motion.div
           layout
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.125 }}
-          className="text-xs font-medium"
+          className="grid h-full w-10 place-content-center text-lg"
         >
-          {title}
-        </motion.span>
-      )}
-
-      {notifs && open && (
+          <Icon />
+        </motion.div>
+        {open && (
+          <motion.span
+            layout
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.125 }}
+            className="text-xs font-medium"
+          >
+            {title}
+          </motion.span>
+        )}
+      
+      {/* {notifs && open && (
         <motion.span
           initial={{ scale: 0, opacity: 0 }}
           animate={{
@@ -39,9 +46,10 @@ const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
         >
           {notifs}
         </motion.span>
-      )}
+      )} */}
     </motion.button>
+    </NavLink>
   );
 };
 
-export default Option
+export default Option;

@@ -13,6 +13,8 @@ import {
   LoginPage,
   Dashboard,
   ProtectedRoute,
+  Setting,
+  DashboardIndexPage,
 } from "./constants/index.js";
 
 // Import element for Routing
@@ -30,8 +32,11 @@ const router = createBrowserRouter(
       <Route path="register" element={<RegisterPage />} />
       <Route path="/login" element={<LoginPage />} />
 
-      <Route element={<ProtectedRoute/>}>
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route element={<ProtectedRoute />}>
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<DashboardIndexPage />} />
+          <Route path="/dashboard/settings" element={<Setting />} />
+        </Route>
       </Route>
     </Route>
   )

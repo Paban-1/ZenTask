@@ -3,16 +3,17 @@ import { Logo, FiChevronDown } from "../../constants/index.js";
 import { motion } from "framer-motion";
 // Import UseSelector & useDispatch
 import { useDispatch, useSelector } from "react-redux";
+import { fetchCurrentUserThunk } from "../../constants";
 // Import getCurrentUser
 // import { fetchCurrentUser } from "../../store/authSlice.js";
 
 const TitleSection = ({ open }) => {
-  // const dispatch = useDispatch();
-  // const { user, status } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const { user, status } = useSelector((state) => state.auth);
 
-  // useEffect(() => {
-  //   dispatch(fetchCurrentUser());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchCurrentUserThunk());
+  }, [dispatch]);
 
   // if (status === "loading") return <p>Loading user...</p>;
   // if (!user) return <p>No active session. Please log in.</p>;
@@ -30,7 +31,7 @@ const TitleSection = ({ open }) => {
               transition={{ delay: 0.125 }}
             >
               <span className="block text-xs font-semibold">
-              user
+                {!user ? "Plese Login" : `${user.name}`}
               </span>
               <span className="block text-xs text-slate-500"></span>
             </motion.div>

@@ -19,6 +19,10 @@ import SidebarSection from "../components/DashboardItems/SidebarSection.jsx";
 import TitleSection from "../components/DashboardItems/TitleSection.jsx";
 import ToggleClose from "../components/DashboardItems/ToggleClose.jsx";
 
+// Import Dashboard Pages & export
+import Setting from "../components/DashboardPages/Setting.jsx"
+import DashboardIndexPage from "../components/DashboardPages/DashboardIndexPage.jsx";
+
 // Import All Navbar Components
 import ShiftingDropDown from "../components/NavBarItems/ShiftingDropDown.jsx";
 import Bridge from "../components/NavBarItems/Bridge.jsx";
@@ -46,6 +50,8 @@ import FooterCart from "../components/ReuseItems/FooterCart.jsx";
 
 // Export all Imports
 export {
+  DashboardIndexPage,
+  Setting,
   NavigationBar,
   FooterCart,
   FaqCart,
@@ -102,6 +108,7 @@ import {
   FiArrowRight,
   FiBarChart2,
   FiPieChart,
+  FiSettings
 } from "react-icons/fi";
 export {
   FiMenu,
@@ -119,6 +126,7 @@ export {
   FiShoppingCart,
   FiTag,
   FiUsers,
+  FiSettings
 };
 
 // Import Images
@@ -126,6 +134,7 @@ import DashPic from "../assets/zendashboard.png";
 import InzoIconZoomed from "../assets/InzoIconZoomed.png";
 import DashBoardPic from "../assets/zendashboardd.png";
 import MainLogo from "../assets/Logo.png";
+import ZenLogo from "../assets/ZenLogo.png"
 
 // Coustomer Imges
 import img1 from "../assets/Imgs/img1.png";
@@ -136,7 +145,7 @@ import img4 from "../assets/Imgs/img4.png";
 export { img1, img2, img3, img4 };
 
 // Export Images
-export { DashPic, InzoIconZoomed, DashBoardPic, MainLogo };
+export { DashPic, InzoIconZoomed, DashBoardPic, MainLogo,ZenLogo };
 
 // Import RTK Store & Export
 import {store} from "../store/store.js"

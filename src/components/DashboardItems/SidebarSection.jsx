@@ -11,6 +11,7 @@ import {
   FiTag,
   FiBarChart,
   FiUsers,
+  FiSettings,
 } from "../../constants/index.js";
 
 const Sidebar = () => {
@@ -72,11 +73,12 @@ const Sidebar = () => {
           open={open}
         />
         <Option
-          Icon={FiUsers}
-          title="Members"
+          Icon={FiSettings}
+          title="Settings"
           selected={selected}
           setSelected={setSelected}
           open={open}
+          to="/dashboard/settings"
         />
       </div>
 
