@@ -6,10 +6,10 @@ import { useDispatch } from "react-redux";
 import { fetchCurrentUserThunk } from "./store/authSlice.js";
 
 const App = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(fetchCurrentUserThunk());
-  }, [dispatch]);
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //   dispatch(fetchCurrentUserThunk());
+  // }, [dispatch]);
   return (
     <div className="">
 

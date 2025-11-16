@@ -47,9 +47,11 @@ import FeatureCart from "../components/ReuseItems/FeatureCart.jsx";
 import PersonasCart from "../components/ReuseItems/PersonasCart.jsx";
 import FaqCart from "../components/ReuseItems/FaqCart.jsx";
 import FooterCart from "../components/ReuseItems/FooterCart.jsx";
+import ImageCart from "../components/ReuseItems/ImageCart.jsx"
 
 // Export all Imports
 export {
+  ImageCart,
   DashboardIndexPage,
   Setting,
   NavigationBar,
@@ -135,6 +137,8 @@ import InzoIconZoomed from "../assets/InzoIconZoomed.png";
 import DashBoardPic from "../assets/zendashboardd.png";
 import MainLogo from "../assets/Logo.png";
 import ZenLogo from "../assets/ZenLogo.png"
+import LoginImg from "../assets/AuthPageImages/LoginImg.jpg"
+import RegisterImg from "../assets/AuthPageImages/RegisterImg.jpg"
 
 // Coustomer Imges
 import img1 from "../assets/Imgs/img1.png";
@@ -145,7 +149,7 @@ import img4 from "../assets/Imgs/img4.png";
 export { img1, img2, img3, img4 };
 
 // Export Images
-export { DashPic, InzoIconZoomed, DashBoardPic, MainLogo,ZenLogo };
+export { DashPic, InzoIconZoomed, DashBoardPic, MainLogo,ZenLogo,LoginImg, RegisterImg };
 
 // Import RTK Store & Export
 import {store} from "../store/store.js"

@@ -19,12 +19,14 @@ const Button = ({
       "bg-white text-black rounded-full hover:bg-black hover:shadow-white hover:shadow-md hover:text-white focus:ring-gray-400 disabled:bg-red-300",
     danger:
       "bg-red-600 text-white hover:bg-red-700 focus:ring-red-400 disabled:bg-red-300",
+    row: "bg-black text-white border border-black hover:bg-transparent hover:text-black hover:border-gray-600 hover:border-[1px]  disabled:bg-red-300 select-none",
   }[variant];
 
   const sizeStyle = {
     sm: "px-3 py-1.5 text-sm",
     md: "px-4 py-2 text-base",
     lg: "px-6 py-3 text-lg",
+    cus:"px-11 py-1 text-base"
   }[size];
   return (
     <button
