@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { NAVITEM, BiMenu, BiX, FiMenu } from "../../constants";
 import {NavLink, useNavigate} from "react-router-dom"
 import {useSelector} from "react-redux"
+import {ZenLogo} from "../../constants"
 
 const NavigationBar = () => {
   const navigate=useNavigate()
@@ -29,8 +30,8 @@ const NavigationBar = () => {
           </button>
         </div>
 
-        <div className="px-2">
-          <h2>Logo</h2>
+        <div className="px-2 flex justify-center items-center">
+          <img src={ZenLogo} alt="" className="h-4 w-4"/><p className="tracking-normal font-semibold">enTask</p>
         </div>
 
         <div className="md:flex gap-4 hidden">

@@ -37,20 +37,28 @@ const LoginPage = () => {
   return (
     <div className="bg-gray-200 fixed inset-0 flex justify-center items-center h-screen">
       <div className="h-full md:w-1/2 w-screen">
-        <ImageCart />
+        <ImageCart
+          Image={LoginImg}
+          textVariants="rounded-tr-full"
+          items="items-start"
+          Titile="Welcome again !!"
+          subText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id.consectetur adipiscing elit. Vivamus id."
+        />
       </div>
-      <div className="rounded-md h-full absolute inset-0 
+      <div
+        className="rounded-md h-full absolute inset-0 
                 md:static md:flex md:items-center md:justify-center
                 md:font-extralight
                 md:text-black
                 text-white
-                flex items-center justify-center md:w-1/2 font-bold">
+                flex items-center justify-center md:w-1/2 font-bold"
+      >
         <form
           onSubmit={handleSubmit}
           className="px-8 space-y-4 z-50 rounded-2xl w-full max-w-md"
         >
           <h1 className="text-2xl text-center tracking-tighter">
-            Wallcome! to you  🔅
+            Wallcome! to you 🔅
           </h1>
           <InputField
             label="Email"
@@ -70,7 +78,12 @@ const LoginPage = () => {
             placehholder="Enter your Password"
             required
           />
-          <Button type="submit" size="cus" variant="row" disabled={status === "loading"}>
+          <Button
+            type="submit"
+            size="cus"
+            variant="row"
+            disabled={status === "loading"}
+          >
             {status === "loading" ? "Logging in..." : "Login"}
           </Button>
           {error && (

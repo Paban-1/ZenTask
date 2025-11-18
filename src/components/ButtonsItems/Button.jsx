@@ -20,6 +20,7 @@ const Button = ({
     danger:
       "bg-red-600 text-white hover:bg-red-700 focus:ring-red-400 disabled:bg-red-300",
     row: "bg-black text-white border border-black hover:bg-transparent hover:text-black hover:border-gray-600 hover:border-[1px]  disabled:bg-red-300 select-none",
+    romi: "bg-black text-white border border-black hover:bg-white hover:text-black hover:border-white/40 hover:border-[1px]  disabled:bg-red-300 select-none",
   }[variant];
 
   const sizeStyle = {

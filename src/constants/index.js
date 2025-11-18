@@ -49,6 +49,13 @@ import FaqCart from "../components/ReuseItems/FaqCart.jsx";
 import FooterCart from "../components/ReuseItems/FooterCart.jsx";
 import ImageCart from "../components/ReuseItems/ImageCart.jsx"
 
+// Import Cart Component Items & export 
+import BlocakInTextCard from "../components/ReuseItems/CartItems/BlockInTextCard.jsx";
+import Example from "../components/ReuseItems/CartItems/Example.jsx";
+import TypeWrite from "../components/ReuseItems/CartItems/TypeWrite.jsx";
+
+export {BlocakInTextCard, Example,TypeWrite }
+
 // Export all Imports
 export {
   ImageCart,

@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 // Import UseSelector & useDispatch
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCurrentUserThunk } from "../../constants";
-// Import getCurrentUser
-// import { fetchCurrentUser } from "../../store/authSlice.js";
 
 const TitleSection = ({ open }) => {
   const dispatch = useDispatch();
